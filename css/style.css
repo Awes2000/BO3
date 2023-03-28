@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+header,
+footer {
+  background: #1f3d15;
+  color: white;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+  gap: 20rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7rem;
+  color: white;
+}
+
+header > img {
+  width: 10rem;
+  display: block;
+  margin: 0 auto;
+}
