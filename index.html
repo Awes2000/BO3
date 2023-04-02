@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>S.A.R</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/main.js" defer></script>
   </head>
   <body>
@@ -20,5 +21,22 @@
         </ul>
       </nav>
     </header>
+    <main class="dashboard">
+      <section class="section--first">
+        <article class="card card--first">
+          <h2>13:06</h2>
+        </article>
+        <article class="card card--second">
+          <canvas id="js--chart--1"></canvas>
+        </article>
+        <article class="card card--third">
+          <canvas id="js--chart--3"></canvas>
+        </article>
+        <article class="card card--fourth"></article>
+      </section>
+      <section class="section--second">
+        <canvas id="js--chart--2"></canvas>
+      </section>
+    </main>
   </body>
 </html>
