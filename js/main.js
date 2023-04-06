@@ -1,3 +1,52 @@
+const weerbericht = document.getElementById("weer-info");
+const zonsopkomst = document.getElementById("js--zonsopkomst");
+const zonsondergang = document.getElementById("js--zonsondergang");
+
+function convertTimestamp(timestamp) {
+  var d = new Date(timestamp * 1000), // Convert the passed timestamp to milliseconds
+    hh = d.getHours(),
+    h = hh,
+    min = ("0" + d.getMinutes()).slice(-2), // Add leading 0.
+    ampm = "AM",
+    time;
+
+  if (hh > 12) {
+    h = hh - 12;
+    ampm = "PM";
+  } else if (hh === 12) {
+    h = 12;
+    ampm = "PM";
+  } else if (hh == 0) {
+    h = 12;
+  }
+
+  // ie: 2014-03-24, 3:00 PM
+  time = h + ":" + min + " " + ampm;
+  return time;
+}
+
+fetch(
+  "https://api.openweathermap.org/data/2.5/weather?q=Amsterdam&appid=071b1a41b498f6af136ed1fadb5eefc2&units=metric"
+)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data.coord.lon);
+    weerbericht.innerHTML =
+      data.weather[0].description +
+      " " +
+      data.main.temp +
+      "c°" +
+      "Voelt als" +
+      " " +
+      data.main.feels_like +
+      "c°";
+    zonsopkomst.innerHTML = "Zonsopkomst " + convertTimestamp(data.sys.sunrise);
+    zonsondergang.innerHTML =
+      "Zonsondergang " + convertTimestamp(data.sys.sunset);
+  });
+
 const labels = [
   "01/04/2023",
   "01/04/2023",
