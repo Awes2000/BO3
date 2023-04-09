@@ -5,8 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>S.A.R</title>
+    <link rel="shortcut icon" type="image/png" href="img/logoicon.png" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://kit.fontawesome.com/40dd9b944f.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/main.js" defer></script>
   </head>
   <body>
@@ -28,6 +33,8 @@
           <p class="datum">02/04/2023</p>
         </article>
         <article class="card card--second">
+          <!--De favicon van fontawesome laad niet in op de article, geen idee waarom-->
+          <i class="fa-solid fa-sunrise fa-fade" style="color: #dbca0f"></i>
           <p id="js--zonsopkomst">Zonsopkomst:</p>
           <p id="js--zonsondergang">Zonsondergang:</p>
         </article>
@@ -35,7 +42,7 @@
           <canvas id="js--chart--3"></canvas>
         </article>
         <article class="card card--fourth">
-          <p id="weer-info">HHHHG</p>
+          <p id="weer-info"></p>
         </article>
       </section>
       <section class="section--second">
