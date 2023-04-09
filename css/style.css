@@ -7,25 +7,25 @@
 html {
   font-size: 62.5%;
 }
+
 .logo {
   width: 10rem;
   height: 10rem;
 }
-nav > ul {
+
+nav ul li {
   display: flex;
   list-style: none;
-  gap: 20rem;
+  gap: 10rem;
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding-top: 7rem;
   color: white;
+  color: rgb(8, 89, 8);
 }
 
-header,
-footer {
-  background: #4a783a;
-  color: white;
+header {
+  background: #FFFFE0;
   border-radius: 1.5rem;
   margin-left: 1.5rem;
   box-shadow: 1 1rem 5rem 0 rgba(0, 0, 0, 0.2);
@@ -34,13 +34,15 @@ footer {
   display: flex;
   justify-content: center;
   margin: 2.5rem;
+  border: 2px solid #006400;
+  color: rgb(8, 89, 8);
 }
 
 body {
   padding: 2rem;
-  background: #bfca87;
+  background: linear-gradient(135deg, #FCEAB8, #FFEEC3);
   font-size: 2rem;
-  font-family: sans-serif;
+  font-family: 'Montserrat';
 }
 
 .dashboard {
@@ -68,6 +70,7 @@ body {
   height: 50%;
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
+  border: 2px solid #006400;
 }
 
 .card--first {
@@ -77,9 +80,29 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
+
 }
 
 .card--second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background: linear-gradient(to bottom, #fce38a 0%, #ff8a5b 50%, #5c6bc0 50%, #64b5f6 100%);
+  font-size: 4rem;
+}
+
+.fa {
+  font-family: 'FontAwesome';
+  font-size: 2rem;
+}
+
+.fa-sunrise {
+  color: orange;
+}
+
+.card--fourth {
   display: flex;
   justify-content: center;
   align-items: center;
