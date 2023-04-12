@@ -42,7 +42,7 @@ body {
   padding: 2rem;
   background: linear-gradient(135deg, #FCEAB8, #FFEEC3);
   font-size: 2rem;
-  font-family: 'Montserrat';
+
 }
 
 .dashboard {
@@ -93,14 +93,13 @@ body {
   font-size: 4rem;
 }
 
-.fa {
-  font-family: 'FontAwesome';
-  font-size: 2rem;
+.card--third {}
+
+.card--second>p {
+  padding: 2.5rem;
 }
 
-.fa-sunrise {
-  color: orange;
-}
+
 
 .card--fourth {
   display: flex;
