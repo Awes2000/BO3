@@ -129,3 +129,18 @@ const config3 = {
 
 new Chart(document.getElementById("js--chart--2"), config2);
 new Chart(document.getElementById("js--chart--3"), config3);
+
+
+//Link maken met HTML
+const Tijd  = document.getElementById("js--time")
+const Datum = document.getElementById("js--date")
+//Ophalen van Datum(jaar, maand, dag)
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+//Ophalen van Tijd(uren, minuten, seconden)
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var dateTime = data+' '+time;
+//Text invoegen in HTML
+Tijd.innerText = time;
+Datum.innerText = date;
+
