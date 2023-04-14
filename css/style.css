@@ -11,6 +11,8 @@ html {
 .logo {
   width: 10rem;
   height: 10rem;
+  position: relative;
+  right: 45vh;
 }
 
 nav ul li {
@@ -24,38 +26,73 @@ nav ul li {
   color: rgb(8, 89, 8);
 }
 
+
+.buttons {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 2px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  position: relative;
+  top: 4vh;
+  right: 2vh;
+  border-radius: 10%;
+}
+
+.buttons:hover {
+  cursor: pointer;
+}
+
+.headerButton {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 2px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  position: relative;
+  left: 55vh;
+}
+
 header {
-  background: #FFFFE0;
+  background: #EDF1D6;
   border-radius: 1.5rem;
   margin-left: 1.5rem;
   box-shadow: 1 1rem 5rem 0 rgba(0, 0, 0, 0.2);
   display: flex;
-  width: 100%;
+  width: 98.5%;
   display: flex;
   justify-content: center;
   margin: 2.5rem;
   border: 2px solid #006400;
   color: rgb(8, 89, 8);
+
 }
 
 body {
   padding: 2rem;
   background: linear-gradient(135deg, #FCEAB8, #FFEEC3);
   font-size: 2rem;
-  font-family: 'Montserrat';
 }
 
 .dashboard {
   width: 100%;
-  height: 85vh;
+  height: 75vh;
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(20, 1fr);
 }
 
 .section--first {
-  grid-column: 1/6;
-  grid-row: span 16;
+  grid-column: 1/8;
+  grid-row: span 21;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -65,8 +102,7 @@ body {
 }
 
 .card {
-  background: #eee;
-  width: 30rem;
+  background: #EDF1D6;
   height: 50%;
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
@@ -80,6 +116,46 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  border: none;
+  border: 3px solid #006400;
+  background-color: black;
+
+
+}
+
+.paragraaf1 {
+  position: absolute;
+  line-height: 200%;
+  color: lightgray;
+  text-shadow:
+    0 0 7px black,
+    0 0 10px black,
+    0 0 21px gray,
+    0 0 42px #fff,
+    0 0 82px #fff,
+    0 0 92px #fff,
+    0 0 102px #fff,
+    0 0 151px #fff;
+
+}
+
+
+.schaalPlaatje{
+  width: 100%;
+  height: 100%;
+}
+
+.tijdPlaatjes {
+  
+
+  
+  
+
+
+}
+
+.tijdPlaatjes:hover{
+
 
 }
 
@@ -93,29 +169,74 @@ body {
   font-size: 4rem;
 }
 
-.fa {
-  font-family: 'FontAwesome';
-  font-size: 2rem;
+.card--second>p {
+  padding: 0.5rem;
 }
 
-.fa-sunrise {
-  color: orange;
-}
+
+
 
 .card--fourth {
   display: flex;
+  padding-top:2rem ;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 10px solid #006400;
+  background: #A4BC92;
+  background: rgb(2, 0, 36);
+  background: radial-gradient(#9DC08B 0%, #609966 50%, #006400 100%);
 }
 
+.temperatuur {
+  transform: scale(1.5);
+  color: black;
+  text-shadow:
+    0 0 7px #A4BC92,
+    0 0 10px #A4BC92,
+    0 0 21px #A4BC92,
+    0 0 42px #A4BC92,
+    0 0 82px #A4BC92,
+    0 0 92px #A4BC92,
+    0 0 102px #A4BC92,
+    0 0 151px #A4BC92;
+  margin-left: 35%;
+  margin-right: 27%;
+  line-height: 200%;
+
+}
+
+
+
 .section--second {
-  grid-column: 6/17;
-  grid-row: span 17;
-  background: #eee;
+  grid-column: 8/21;
+  grid-row: span 21;
+  background: #EDF1D6;
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.section--third {
+  grid-row: 1/21;
+  grid-column: 21/31;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  padding: 0px 2rem 0rem;
+}
+
+.section--second>canvas {
+  height: 100%;
+  width: 100%;
+ 
 }
 
 .section--second canvas {
@@ -123,6 +244,12 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+.chart3 {
+  
+}
+
+
 
 @media screen and (max-width: 87.5rem) {
   .dashboard {
