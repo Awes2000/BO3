@@ -130,41 +130,64 @@ const config3 = {
 new Chart(document.getElementById("js--chart--2"), config2);
 new Chart(document.getElementById("js--chart--3"), config3);
 
+setInterval(function () {
+  //Link maken met HTML
+  const Tijd = document.getElementById("js--time");
+  const Datum = document.getElementById("js--date");
+  //Ophalen van Datum(jaar, maand, dag)
+  var today = new Date();
+  var date =
+    today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+  //Ophalen van Tijd(uren, minuten, seconden)
+  var time =
+    today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var dateTime = data + " " + time;
+  //Text invoegen in HTML
+  Tijd.innerText = time;
+  Datum.innerText = date;
 
-//Link maken met HTML
-const Tijd  = document.getElementById("js--time")
-const Datum = document.getElementById("js--date")
-//Ophalen van Datum(jaar, maand, dag)
-var today = new Date();
-var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-//Ophalen van Tijd(uren, minuten, seconden)
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-var dateTime = data+' '+time;
-//Text invoegen in HTML
-Tijd.innerText = time;
-Datum.innerText = date;
+  var uren = today.getHours();
+  //id ophalen uit HTML
+  var nacht = document.getElementById("js--nacht");
+  var dag = document.getElementById("js--dag");
 
-var uren = today.getHours()
-
-
-//id ophalen uit HTML
-var nacht = document.getElementById("js--nacht")
-var dag = document.getElementById("js--dag")
-
-
-//alles tussen 6 uur sochtends en 6 uur savonds is zonnig
-if (uren === 6 || uren === 7 || uren === 8 || uren === 9 || uren === 10 || uren === 11 || uren === 12 || uren === 13 || uren === 14 || uren === 15 || uren === 16 || uren === 17   ){
-  nacht.style.display = "none";
-  dag.style.display = "show"; 
-}
-//anders is het nacht: (6 uur s'avonds tot 6 uur s'ochtends)
-else if (uren === 18 || uren === 19 || uren === 20 || uren === 21 || uren === 22 || uren === 23 || uren === 0 || uren === 1 || uren === 2 || uren === 3 || uren === 4 || uren === 5   ) {
-  dag.style.display = "none";
-  nacht.style.display = "show";
-}
-else{
-  dag.style.display = "none";
-  nacht.style.display = "none";
-}
-;
-
+  //alles tussen 6 uur sochtends en 6 uur savonds is zonnig
+  if (
+    uren === 6 ||
+    uren === 7 ||
+    uren === 8 ||
+    uren === 9 ||
+    uren === 10 ||
+    uren === 11 ||
+    uren === 12 ||
+    uren === 13 ||
+    uren === 14 ||
+    uren === 15 ||
+    uren === 16 ||
+    uren === 17
+  ) {
+    nacht.style.display = "none";
+    dag.style.display = "show";
+  }
+  //anders is het nacht: (6 uur s'avonds tot 6 uur s'ochtends)
+  else if (
+    uren === 18 ||
+    uren === 19 ||
+    uren === 20 ||
+    uren === 21 ||
+    uren === 22 ||
+    uren === 23 ||
+    uren === 0 ||
+    uren === 1 ||
+    uren === 2 ||
+    uren === 3 ||
+    uren === 4 ||
+    uren === 5
+  ) {
+    dag.style.display = "none";
+    nacht.style.display = "show";
+  } else {
+    dag.style.display = "none";
+    nacht.style.display = "none";
+  }
+}, 1000);
