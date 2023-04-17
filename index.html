@@ -1,69 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dashboard sustainable energy" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>S.A.R</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Open+Sans:ital@0;1&family=Pacifico&display=swap" rel="Bebas">
-  <link rel="shortcut icon" type="image/png" href="img/logoicon.png" />
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://kit.fontawesome.com/40dd9b944f.js" crossorigin="anonymous"></script>
-  <script src="js/main.js" defer></script>
-</head>
+    <title>S.A.R Sustainability</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Open+Sans:ital@0;1&family=Pacifico&display=swap"
+      rel="Bebas"
+    />
+    <link rel="shortcut icon" type="image/png" href="img/logoicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://kit.fontawesome.com/40dd9b944f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js" defer></script>
+  </head>
 
-<body>
-  <header>
-    <img src="img/logo SAR sus (3).png" alt="" class="logo" />
-    <nav>
-      <h1>S.A.R Sustainability</h1>
-      <ul>
-        <button class="buttons">        
-          <li>Test</li>
-        </button>
-        <button class="buttons">
-          <li>Test</li>
-        </button>
-        <button class="buttons">
-          <li>Test</li>
-        </button>
-      </ul>
-    </nav>
-  </header>
-  <main class="dashboard">
-    <section class="section--first">
-      <article class="card card--first">
-       <div class="tijdPlaatjes">
-          <img class="schaalPlaatje" id="js--nacht" src="img/moon-Art.webp" alt="mooie maan met sterren">
-          <img class="schaalPlaatje" id="js--dag" src="img/sun-Art.webp" alt="mooie zon met sterren">
-       </div>  
-       <div class="paragraaf1">
-        <p  id="js--time" class="tijd" ></p>
-        <p  id="js--date" class="datum"></p>
-       
-       </div>
-      </article>
-      <article class="card card--second">
-        <!--De favicon van fontawesome laad niet in op de article, geen idee waarom-->
-        <i class="fa-solid fa-sunrise fa-fade" style="color: #dbca0f"></i>
-        <p id="js--zonsopkomst">Zonsopkomst:</p>
-        <p id="js--zonsondergang">Zonsondergang:</p>
-      </article>
-    </section>
-    <section class="section--second">
-      <canvas id="js--chart--2"></canvas>
-      <canvas class="chart3" id="js--chart--3"></canvas> 
-    </section>  
-    <section class="section--third">
-      <article class="card card--fourth">
-        <p class="temperatuur" id="weer-info"></p>
-      </article>
-    </section>
-  </main>
-</body>
-
+  <body>
+    <header>
+      <img
+        src="img/logo SAR sus (3).png"
+        alt="Logo van S.A.R Sustainability"
+        class="logo"
+      />
+      <nav>
+        <h1>S.A.R Sustainability</h1>
+        <ul>
+          <button class="buttons">
+            <li>Home</li>
+          </button>
+          <button class="buttons">
+            <li>Kamers</li>
+          </button>
+          <button class="buttons">
+            <li>Verbuik</li>
+          </button>
+        </ul>
+      </nav>
+    </header>
+    <main class="dashboard">
+      <section class="section--first">
+        <article class="card card--first">
+          <div class="tijdPlaatjes">
+            <img
+              class="schaalPlaatje"
+              id="js--nacht"
+              src="img/moon-Art.webp"
+              alt="mooie maan met sterren"
+            />
+            <img
+              class="schaalPlaatje"
+              id="js--dag"
+              src="img/sun-Art.webp"
+              alt="mooie zon met sterren"
+            />
+          </div>
+          <div class="paragraaf1">
+            <p id="js--time" class="tijd"></p>
+            <p id="js--date" class="datum"></p>
+          </div>
+        </article>
+        <article class="card card--second">
+          <!--De favicon van fontawesome laad niet in op de article, geen idee waarom-->
+          <i class="fa fa-sun fa-bounce"></i>
+          <p id="js--zonsopkomst">Zonsopkomst:</p>
+          <p id="js--zonsondergang">Zonsondergang:</p>
+          <i class="fa fa-moon fa-bounce"></i>
+        </article>
+      </section>
+      <section class="section--second">
+        <canvas id="js--chart--2"></canvas>
+        <canvas class="chart3" id="js--chart--3"></canvas>
+      </section>
+      <section class="section--third">
+        <article class="card card--fourth">
+          <p class="temperatuur" id="weer-info"></p>
+        </article>
+      </section>
+    </main>
+  </body>
 </html>
