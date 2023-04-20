@@ -184,6 +184,17 @@ body {
   background: radial-gradient(#9DC08B 0%, #609966 50%, #006400 100%);
 }
 
+.card--fifth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  font-size: 2.5rem;
+  text-align: center;
+
+}
+
 .temperatuur {
   transform: scale(1.5);
   color: black;
