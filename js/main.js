@@ -32,7 +32,6 @@ fetch(
     return response.json();
   })
   .then((data) => {
-    console.log(data.coord.lon);
     weerbericht.innerHTML =
       data.weather[0].description +
       " " +
@@ -191,3 +190,22 @@ setInterval(function () {
     nacht.style.display = "none";
   }
 }, 1000);
+
+const arduino = document.getElementById("arduino");
+
+fetch("https://28003.hosts2.ma-cloud.nl/duurzaamhuis/post.php")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+    arduino.innerHTML =
+      "🤖Arduino🤖<br>" +
+      "Temperatuur: " +
+      data.Temperature +
+      " " +
+      "<br>Luchtvochtigheid: " +
+      data.Humidity +
+      "<br>LichtHoeveelHeid: " +
+      data.LichtHoeveelheid;
+  });
